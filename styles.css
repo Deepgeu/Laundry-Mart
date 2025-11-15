@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --prime-bg: #f6eeee;
+  --blue-text: #0096FF;
+
+  /*nav-color*/
+  --nav-text: grey;
+
+  /*sizes corrected*/
+  --sm-text: 14px;
+  --md-text: 22px;
+  --slg-text: 34px;
+}
+
+/* NAVIGATION */
+#Navigation {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 55px;
+  height: auto;
+}
+
+.logo:hover {
+  filter: drop-shadow(0px 0px 5px lightsalmon);
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav li a {
+  color: var(--nav-text);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.user button {
+  background-color: #e3f3ff;
+  color: var(--blue-text);
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+#Hero-Section {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+/* LEFT SIDE */
+.left-div {
+  flex: 1;
+}
+
+.left-div h1 {
+  font-size: var(--slg-text);
+  color: #222;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.left-div h1 span {
+  color: var(--blue-text);
+}
+
+.left-div p {
+  margin-top: 18px;
+  font-size: var(--md-text);
+  color: rgb(112, 105, 105);
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.btn button {
+  margin-top: 28px;
+  background-color: var(--blue-text);
+  color: white;
+  padding: 14px 34px;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn button:hover {
+  background-color: #0077dd;
+}
+
+/* RIGHT SIDE */
+.right-div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.right-div img {
+  width: 430px;
+  max-width: 100%;
+  border-radius: 14px;
+}
+@media (max-width: 1440px) {
+  #Hero-Section {
+    padding: 50px 40px;
+  }
+
+  .left-div h1 {
+    font-size: 38px;
+  }
+}
+
+/* 2) NORMAL LAPTOPS (1024px - 1200px) */
+@media (max-width: 1200px) {
+  .left-div h1 {
+    font-size: 34px;
+  }
+
+  .left-div p {
+    font-size: 17px;
+  }
+
+  .right-div img {
+    width: 380px;
+  }
+}
+
+/* 3) TABLETS (768px - 1023px) */
+@media (max-width: 1024px) {
+  #Hero-Section {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 30px;
+  }
+
+  .left-div h1 {
+    font-size: 32px;
+  }
+
+  .left-div p {
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .right-div {
+    margin-top: 30px;
+  }
+
+  .right-div img {
+    width: 350px;
+  }
+}
+
+/* 4) LARGE MOBILE SCREENS (600px - 767px) */
+@media (max-width: 768px) {
+  #Hero-Section {
+    padding: 40px 24px;
+  }
+
+  .left-div h1 {
+    font-size: 30px;
+  }
+
+  .right-div img {
+    width: 320px;
+  }
+}
+
+/* 5) NORMAL MOBILE (480px - 599px) */
+@media (max-width: 600px) {
+  .navigation{
+    padding: 10px 50px;
+  }
+  .nav{
+    gap: 30px;
+  }
+  .left-div h1 {
+    font-size: 28px;
+  }
+
+  .left-div p {
+    font-size: 15px;
+  }
+
+  .right-div img {
+    width: 290px;
+  }
+}
+
+/* 6) SMALL MOBILE (350px - 480px) */
+@media (max-width: 480px) {
+  .navigation{
+    padding: 5px 50px;
+  }
+  .nav{
+    gap: 20px;
+  }
+  #Hero-Section {
+    padding: 30px 16px;
+  }
+
+  .left-div h1 {
+    font-size: 24px;
+  }
+
+  .btn button {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .right-div img {
+    width: 250px;
+  }
+}
+
+/* 7) VERY SMALL DEVICES (320px - 349px) */
+@media (max-width: 350px) {
+  .navigation{
+    padding: 0px 50px;
+  }
+  .nav{
+    gap: 10px;
+  }
+  .left-div h1 {
+    font-size: 20px;
+  }
+
+  .left-div p {
+    font-size: 14px;
+  }
+
+  .right-div img {
+    width: 220px;
+  }
+}
